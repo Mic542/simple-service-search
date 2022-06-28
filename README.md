@@ -33,7 +33,20 @@ public class TestScriptGet : MonoBehaviour
         Debug.Log(testHello.gameObject.GetInstanceID());
 
     }
-}
-    
+}   
 ```
+TestScript script :
+```
+public class TestScript : MonoBehaviour
+{
+    void Awake()
+    {
+        ServiceLocator.RegisterSingleton<TestScript>(this);
+    }
 
+    public void Hello()
+    {
+        Debug.Log("Hello!");
+    }
+}
+```
